@@ -1,0 +1,782 @@
+$primary-color: #c9777d;
+$primary-color-transparent: rgba(201, 119, 125, 0.73);
+$secondary-color: #727176;
+$secondary-color-light: #bfbfbf;
+$tertiary-color: #fff0f4;
+$quaternary-color: #000;
+$quinary-color: #c4c4c4;
+$quinary-color-dark: #696969;
+$quinary-color-transparent: rgba(0, 0, 0, 0.8);
+$quinary-color-transparent-light: rgba(0, 0, 0, 0.2);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-selection {
+  background: $primary-color;
+  color: $quaternary-color;
+}
+::-moz-selection {
+  background: $primary-color;
+  color: $quaternary-color;
+}
+::selection {
+  background: $primary-color;
+  color: $quaternary-color;
+}
+body {
+  position: relative;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  a,
+  a:hover {
+    color: $quaternary-color;
+  }
+}
+.main {
+  width: 100%;
+  .d-content-main {
+    width: 60%;
+    margin: 0 auto;
+
+    @media (max-width: 1368px) {
+      width: 85%;
+    }
+    @media (max-width: 1060px) {
+      width: 90%;
+    }
+    @media (max-width: 920px) {
+      width: 95%;
+    }
+    section {
+      padding: 40px 0;
+    }
+  }
+}
+/* Navbar */
+.nav {
+  width: 100%;
+  overflow: hidden;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  a {
+    color: $secondary-color;
+  }
+  &-container {
+    width: 64%;
+    margin: 0 auto;
+    &-side {
+      width: 42.9635%;
+      display: flex;
+    }
+    &-responsive {
+      display: none;
+    }
+    @media (max-width: 1368px) {
+      width: 85%;
+    }
+    @media (max-width: 770px) {
+      .navbar {
+        display: none;
+      }
+      width: 100%;
+      &-responsive {
+        display: block;
+        width: 100%;
+        .heading,
+        .subheading {
+          width: 100%;
+          display: flex;
+        }
+        .heading {
+          justify-content: space-between;
+          align-items: center;
+          height: 80px;
+          background-color: $tertiary-color;
+          .h-account {
+            font-size: 19px;
+            i {
+              color: $quaternary-color;
+            }
+          }
+          .icon-cart {
+            height: 26px;
+            margin-right: 5px;
+          }
+          .count-cart {
+            font-size: 12px;
+          }
+        }
+        .subheading {
+          height: 95px;
+        }
+        &-side {
+          width: 25%;
+          display: flex;
+          padding: 0 2rem;
+          align-items: center;
+          @media (max-width: 500px) {
+            width: 20%;
+            padding: 0 1rem;
+          }
+          .image-content {
+            width: 100%;
+            height: 100%;
+            img {
+              max-height: 93px;
+              object-fit: contain;
+              @media (max-width: 600px) {
+                width: 100%;
+              }
+            }
+          }
+          &.justify-content-end {
+            width: 20%;
+            justify-content: end;
+            @media (max-width: 500px) {
+              width: 15%;
+            }
+          }
+          a {
+            display: block;
+          }
+        }
+        &-center {
+          width: 55%;
+          display: flex;
+          align-items: center;
+          @media (max-width: 500px) {
+            width: 65%;
+          }
+        }
+        .search-content-form {
+          width: 100%;
+          .bt-primary {
+            padding: 9px 15px 10px 15px;
+            border-width: 1px 1px 1px 1px;
+          }
+        }
+      }
+    }
+  }
+}
+.nav-menu {
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    li {
+      border-bottom: 3px solid transparent;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        height: 46px;
+      }
+      &.active,
+      &:hover {
+        border-bottom: 3px solid $primary-color;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  i {
+    font-size: 22px;
+    color: $quaternary-color;
+  }
+}
+
+.nav-menu ul li.active a,
+.nav-menu ul li:hover a {
+  color: $primary-color;
+}
+.logo-center {
+  width: 14.073%;
+  text-align: center;
+  .image-content {
+    margin: auto;
+    width: 80%;
+  }
+  img {
+    max-width: 93px;
+    width: 88%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+.search-icon {
+  right: 0;
+  top: 0;
+  width: 24.947%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.account {
+  width: 21.227%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: $quinary-color;
+      font-size: 12px;
+      padding-right: 0.3rem;
+    }
+  }
+}
+.cart {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  height: 46px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon-cart {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.2rem;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.count-cart {
+  background: $primary-color;
+  color: #fff;
+  padding: 0px 0.5rem;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Navbar */
+/* Sections */
+.widget-cards {
+  display: grid;
+  margin: 0 auto;
+
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 1.6rem;
+
+  @media (max-width: 1375px) {
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  }
+  @media (max-width: 870px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  @media (max-width: 660px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .item-widget {
+    border-radius: 15px;
+
+    img {
+      border-radius: 15px;
+      height: 100%;
+      object-fit: fill;
+    }
+    &.card {
+      border: 0;
+      box-shadow: none;
+      border-radius: 0;
+      .card-img-overlay {
+        background-color: transparent;
+        background-image: linear-gradient(90deg, #ffffff00 50%, #ffffffbd 77%);
+        opacity: 1;
+        justify-content: center;
+      }
+      .card-title {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        p {
+          margin: 0;
+          padding: 0;
+          color: $primary-color;
+          font-family: "BioFemme Comfortaa", Sans-serif;
+          font-size: 35px;
+          font-weight: 500;
+          letter-spacing: -1.3px;
+        }
+        .subtitle {
+          color: #414141;
+          font-family: "Futura", Sans-serif;
+          font-size: 27px;
+          font-weight: normal;
+        }
+      }
+      .card-content {
+        .bt-primary {
+          height: 50px;
+          transition: none;
+          &:hover {
+            background-color: $primary-color;
+            color: #fff;
+            border: 1px solid $primary-color;
+          }
+        }
+      }
+    }
+    .carousel-indicators {
+      button {
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        &.active {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+.products {
+  &-header {
+    h4 {
+      color: $quaternary-color;
+      font-family: "BioFemme Comfortaa", Sans-serif;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      font-size: 15px;
+    }
+    h2 {
+      color: $primary-color;
+      font-family: "BioFemme Comfortaa", Sans-serif;
+      font-size: 35px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  .product {
+    width: 250px;
+    font-family: "BioFemme Comfortaa", Sans-serif;
+    font-weight: normal;
+    position: relative;
+    &:hover {
+      box-shadow: 5px 5px 10px $quinary-color-transparent-light;
+      transition: all 0.2s ease-in-out;
+    }
+    &-info {
+      background-color: $tertiary-color;
+      padding: 5px 10px;
+      .heading-title,
+      .heading-subtitle {
+        color: $quaternary-color;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-size: 12px;
+        margin: 0;
+      }
+      h4 {
+        font-size: 11px;
+        margin: 0;
+      }
+      &-price {
+        color: $quaternary-color;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.owl-carousel .owl-stage-outer {
+  overflow-y: visible !important;
+  height: 350px;
+}
+.carousel-products {
+  margin-bottom: 40px;
+  .item {
+    .product-image {
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  .owl-dots {
+    margin-top: 30px;
+    // center
+    display: flex;
+    justify-content: center;
+    .owl-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid $primary-color;
+      margin: 0 0.5rem;
+    }
+    .owl-dot.active {
+      background: $primary-color;
+    }
+  }
+}
+
+.bt-primary {
+  background: $primary-color;
+  color: #fff;
+  padding: 15px 40px 15px 40px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+
+  &:hover {
+    background: #fff;
+    color: $primary-color;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.subscription {
+  display: block;
+  height: 400px;
+  text-align: center;
+  .heading-title {
+    color: $primary-color;
+    font-family: "BioFemme Comfortaa", Sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .heading-description {
+    color: $quinary-color-dark;
+    font-family: "Futura", Sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+  }
+  img {
+    height: 400px;
+  }
+  &-content {
+    margin: auto;
+    max-width: 769px;
+    min-height: 290px;
+
+    &-form {
+      height: 50px;
+      .bt-primary {
+        border: 0;
+      }
+    }
+  }
+}
+
+.item-content-form {
+  input {
+    border-radius: 50px;
+    &:focus {
+      outline: none;
+      border: 1px solid $primary-color;
+      box-shadow: none;
+    }
+  }
+  .input-group-text {
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+  }
+}
+
+.footer {
+  width: 100%;
+  &-content-info {
+    min-height: 200px;
+
+    &-card {
+      .logo {
+        img {
+          width: 80%;
+        }
+      }
+      .payment {
+        img {
+          margin-right: 30px;
+        }
+        @media (max-width: 770px) {
+          display: flex;
+          justify-content: space-between;
+          img {
+            margin: 0;
+          }
+        }
+      }
+      &-title {
+        color: $quaternary-color;
+        font-family: "BioFemme Comfortaa", Sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      &-content {
+        margin-top: 15px;
+        ul {
+          li {
+            margin-bottom: 5px;
+            a {
+              font-family: "BioFemme Comfortaa", Sans-serif;
+              font-size: 15px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 770px) {
+      flex-direction: column;
+      width: 100%;
+      &-card {
+        padding-top: 20px;
+        &.line-top {
+          border: solid $secondary-color-light;
+          border-width: 1px 0px 0px 0px;
+        }
+        .logo {
+          width: 100%;
+          display: flex;
+          // center
+          justify-content: center;
+          text-align: center;
+          img {
+            width: 20%;
+            @media (max-width: 600px) {
+              width: 30%;
+            }
+            @media (max-width: 400px) {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-copyright {
+    border: solid $secondary-color-light;
+    border-width: 1px 0px 0px 0px;
+    margin-top: 10px;
+    padding: 5px 0px;
+    min-height: 50px;
+    p {
+      color: $secondary-color-light;
+      padding: 0;
+      margin: 0;
+    }
+    &-content {
+      height: 50px;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      .socials {
+        a {
+          background-color: $primary-color;
+          color: #fff;
+          margin-right: 5px;
+          border-radius: 50%;
+          padding: 5px 13px;
+          font-size: 20px;
+          text-align: center;
+          display: inline-block;
+          &:hover {
+            opacity: 0.9;
+            color: #fff;
+          }
+        }
+      }
+    }
+    @media (max-width: 770px) {
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.icon-bars {
+  -webkit-mask: url(../images/icon-bars.svg) no-repeat center;
+  mask: url(../images/icon-bars.svg) no-repeat center;
+}
+
+.gi-bars {
+  background-color: $primary-color;
+  height: 35px;
+  width: 35px;
+}
+
+// modal
+.modalSearch {
+  display: none;
+
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    display: flex;
+  }
+  //   position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  justify-content: space-between;
+  &-side {
+    display: flex;
+    width: 20%;
+    padding: 0px 60px;
+    align-items: center;
+    justify-content: center;
+
+    &.dialog-close-button a {
+      color: $primary-color;
+      font-size: 33px;
+    }
+  }
+  &-center {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    .search-content-form {
+      width: 100%;
+    }
+  }
+}
+
+.disable {
+  display: none;
+}
+
+.modalMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: $quinary-color-transparent;
+
+  &.active {
+    display: flex;
+  }
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  &-content {
+    z-index: 900;
+    width: 70%;
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+    margin: 0 auto;
+    background-color: $primary-color-transparent;
+    box-shadow: 2px 8px 23px 3px rgba(0, 0, 0, 0.2);
+    &-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0px;
+      position: relative;
+
+      &-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 10px;
+        a {
+          &,
+          :hover {
+            color: #fff;
+          }
+          font-size: 33px;
+        }
+      }
+    }
+    &-body {
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: #fff;
+          a {
+            color: $primary-color;
+          }
+        }
+
+        &.active {
+          background-color: #fff;
+          a {
+            color: $primary-color;
+          }
+        }
+        a {
+          width: 100%;
+          padding: 15px;
+          color: #ffffff;
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+.bt-ws {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 2;
+  bottom: 80px;
+  right: 18px;
+  width: 60px;
+  max-width: 95vw;
+  background: #25d366;
+  color: inherit;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 1px 6px 24px 0 rgb(7 94 84/24%);
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  .bt-ws-item {
+    color: #fff;
+    font-size: 40px;
+  }
+}

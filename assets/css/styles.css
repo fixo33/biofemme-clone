@@ -1,0 +1,786 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-selection {
+  background: #c9777d;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #c9777d;
+  color: #000;
+}
+
+::selection {
+  background: #c9777d;
+  color: #000;
+}
+
+body {
+  position: relative;
+}
+body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body li {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body a,
+body a:hover {
+  color: #000;
+}
+
+.main {
+  width: 100%;
+}
+.main .d-content-main {
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 1368px) {
+  .main .d-content-main {
+    width: 85%;
+  }
+}
+@media (max-width: 1060px) {
+  .main .d-content-main {
+    width: 90%;
+  }
+}
+@media (max-width: 920px) {
+  .main .d-content-main {
+    width: 95%;
+  }
+}
+.main .d-content-main section {
+  padding: 40px 0;
+}
+
+/* Navbar */
+.nav {
+  width: 100%;
+  overflow: hidden;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+.nav a {
+  color: #727176;
+}
+.nav-container {
+  width: 64%;
+  margin: 0 auto;
+}
+.nav-container-side {
+  width: 42.9635%;
+  display: flex;
+}
+.nav-container-responsive {
+  display: none;
+}
+@media (max-width: 1368px) {
+  .nav-container {
+    width: 85%;
+  }
+}
+@media (max-width: 770px) {
+  .nav-container {
+    width: 100%;
+  }
+  .nav-container .navbar {
+    display: none;
+  }
+  .nav-container-responsive {
+    display: block;
+    width: 100%;
+  }
+  .nav-container-responsive .heading,
+.nav-container-responsive .subheading {
+    width: 100%;
+    display: flex;
+  }
+  .nav-container-responsive .heading {
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #fff0f4;
+  }
+  .nav-container-responsive .heading .h-account {
+    font-size: 19px;
+  }
+  .nav-container-responsive .heading .h-account i {
+    color: #000;
+  }
+  .nav-container-responsive .heading .icon-cart {
+    height: 26px;
+    margin-right: 5px;
+  }
+  .nav-container-responsive .heading .count-cart {
+    font-size: 12px;
+  }
+  .nav-container-responsive .subheading {
+    height: 95px;
+  }
+  .nav-container-responsive-side {
+    width: 25%;
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+  }
+}
+@media (max-width: 770px) and (max-width: 500px) {
+  .nav-container-responsive-side {
+    width: 20%;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 770px) {
+  .nav-container-responsive-side .image-content {
+    width: 100%;
+    height: 100%;
+  }
+  .nav-container-responsive-side .image-content img {
+    max-height: 93px;
+    object-fit: contain;
+  }
+}
+@media (max-width: 770px) and (max-width: 600px) {
+  .nav-container-responsive-side .image-content img {
+    width: 100%;
+  }
+}
+@media (max-width: 770px) {
+  .nav-container-responsive-side.justify-content-end {
+    width: 20%;
+    justify-content: end;
+  }
+}
+@media (max-width: 770px) and (max-width: 500px) {
+  .nav-container-responsive-side.justify-content-end {
+    width: 15%;
+  }
+}
+@media (max-width: 770px) {
+  .nav-container-responsive-side a {
+    display: block;
+  }
+}
+@media (max-width: 770px) {
+  .nav-container-responsive-center {
+    width: 55%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 770px) and (max-width: 500px) {
+  .nav-container-responsive-center {
+    width: 65%;
+  }
+}
+@media (max-width: 770px) {
+  .nav-container-responsive .search-content-form {
+    width: 100%;
+  }
+  .nav-container-responsive .search-content-form .bt-primary {
+    padding: 9px 15px 10px 15px;
+    border-width: 1px 1px 1px 1px;
+  }
+}
+
+.nav-menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+.nav-menu ul li {
+  border-bottom: 3px solid transparent;
+}
+.nav-menu ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  height: 46px;
+}
+.nav-menu ul li.active, .nav-menu ul li:hover {
+  border-bottom: 3px solid #c9777d;
+  transition: all 0.3s ease-in-out;
+}
+.nav-menu i {
+  font-size: 22px;
+  color: #000;
+}
+
+.nav-menu ul li.active a,
+.nav-menu ul li:hover a {
+  color: #c9777d;
+}
+
+.logo-center {
+  width: 14.073%;
+  text-align: center;
+}
+.logo-center .image-content {
+  margin: auto;
+  width: 80%;
+}
+.logo-center img {
+  max-width: 93px;
+  width: 88%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.search-icon {
+  right: 0;
+  top: 0;
+  width: 24.947%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.account {
+  width: 21.227%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+}
+.account a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account a span {
+  color: #c4c4c4;
+  font-size: 12px;
+  padding-right: 0.3rem;
+}
+
+.cart {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  height: 46px;
+}
+.cart a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart a .icon-cart {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.2rem;
+}
+.cart a .icon-cart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.count-cart {
+  background: #c9777d;
+  color: #fff;
+  padding: 0px 0.5rem;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar */
+/* Sections */
+.widget-cards {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 1.6rem;
+}
+@media (max-width: 1375px) {
+  .widget-cards {
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  }
+}
+@media (max-width: 870px) {
+  .widget-cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+@media (max-width: 660px) {
+  .widget-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+.widget-cards .item-widget {
+  border-radius: 15px;
+}
+.widget-cards .item-widget img {
+  border-radius: 15px;
+  height: 100%;
+  object-fit: fill;
+}
+.widget-cards .item-widget.card {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+.widget-cards .item-widget.card .card-img-overlay {
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.7411764706) 77%);
+  opacity: 1;
+  justify-content: center;
+}
+.widget-cards .item-widget.card .card-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.widget-cards .item-widget.card .card-title p {
+  margin: 0;
+  padding: 0;
+  color: #c9777d;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: -1.3px;
+}
+.widget-cards .item-widget.card .card-title .subtitle {
+  color: #414141;
+  font-family: "Futura", Sans-serif;
+  font-size: 27px;
+  font-weight: normal;
+}
+.widget-cards .item-widget.card .card-content .bt-primary {
+  height: 50px;
+  transition: none;
+}
+.widget-cards .item-widget.card .card-content .bt-primary:hover {
+  background-color: #c9777d;
+  color: #fff;
+  border: 1px solid #c9777d;
+}
+.widget-cards .item-widget .carousel-indicators button {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.widget-cards .item-widget .carousel-indicators button.active {
+  background: #fff;
+}
+
+.products-header h4 {
+  color: #000;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+.products-header h2 {
+  color: #c9777d;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.products .product {
+  width: 250px;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-weight: normal;
+  position: relative;
+}
+.products .product:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.products .product-info {
+  background-color: #fff0f4;
+  padding: 5px 10px;
+}
+.products .product-info .heading-title,
+.products .product-info .heading-subtitle {
+  color: #000;
+  margin-bottom: 5px;
+}
+.products .product-info h2 {
+  font-size: 12px;
+  margin: 0;
+}
+.products .product-info h4 {
+  font-size: 11px;
+  margin: 0;
+}
+.products .product-info-price {
+  color: #000;
+  font-size: 12px;
+}
+
+.owl-carousel .owl-stage-outer {
+  overflow-y: visible !important;
+  height: 350px;
+}
+
+.carousel-products {
+  margin-bottom: 40px;
+}
+.carousel-products .item .product-image img {
+  width: 250px;
+  height: 250px;
+}
+.carousel-products .owl-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.carousel-products .owl-dots .owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #c9777d;
+  margin: 0 0.5rem;
+}
+.carousel-products .owl-dots .owl-dot.active {
+  background: #c9777d;
+}
+
+.bt-primary {
+  background: #c9777d;
+  color: #fff;
+  padding: 15px 40px 15px 40px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+}
+.bt-primary:hover {
+  background: #fff;
+  color: #c9777d;
+  transition: all 0.3s ease-in-out;
+}
+
+.subscription {
+  display: block;
+  height: 400px;
+  text-align: center;
+}
+.subscription .heading-title {
+  color: #c9777d;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+.subscription .heading-description {
+  color: #696969;
+  font-family: "Futura", Sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+}
+.subscription img {
+  height: 400px;
+}
+.subscription-content {
+  margin: auto;
+  max-width: 769px;
+  min-height: 290px;
+}
+.subscription-content-form {
+  height: 50px;
+}
+.subscription-content-form .bt-primary {
+  border: 0;
+}
+
+.item-content-form input {
+  border-radius: 50px;
+}
+.item-content-form input:focus {
+  outline: none;
+  border: 1px solid #c9777d;
+  box-shadow: none;
+}
+.item-content-form .input-group-text {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+}
+.footer-content-info {
+  min-height: 200px;
+}
+.footer-content-info-card .logo img {
+  width: 80%;
+}
+.footer-content-info-card .payment img {
+  margin-right: 30px;
+}
+@media (max-width: 770px) {
+  .footer-content-info-card .payment {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-content-info-card .payment img {
+    margin: 0;
+  }
+}
+.footer-content-info-card-title {
+  color: #000;
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.footer-content-info-card-content {
+  margin-top: 15px;
+}
+.footer-content-info-card-content ul li {
+  margin-bottom: 5px;
+}
+.footer-content-info-card-content ul li a {
+  font-family: "BioFemme Comfortaa", Sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+}
+@media (max-width: 770px) {
+  .footer-content-info {
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer-content-info-card {
+    padding-top: 20px;
+  }
+  .footer-content-info-card.line-top {
+    border: solid #bfbfbf;
+    border-width: 1px 0px 0px 0px;
+  }
+  .footer-content-info-card .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-content-info-card .logo img {
+    width: 20%;
+  }
+}
+@media (max-width: 770px) and (max-width: 600px) {
+  .footer-content-info-card .logo img {
+    width: 30%;
+  }
+}
+@media (max-width: 770px) and (max-width: 400px) {
+  .footer-content-info-card .logo img {
+    width: 50%;
+  }
+}
+.footer-copyright {
+  border: solid #bfbfbf;
+  border-width: 1px 0px 0px 0px;
+  margin-top: 10px;
+  padding: 5px 0px;
+  min-height: 50px;
+}
+.footer-copyright p {
+  color: #bfbfbf;
+  padding: 0;
+  margin: 0;
+}
+.footer-copyright-content {
+  height: 50px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.footer-copyright-content .socials a {
+  background-color: #c9777d;
+  color: #fff;
+  margin-right: 5px;
+  border-radius: 50%;
+  padding: 5px 13px;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+}
+.footer-copyright-content .socials a:hover {
+  opacity: 0.9;
+  color: #fff;
+}
+@media (max-width: 770px) {
+  .footer-copyright {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.icon-bars {
+  -webkit-mask: url(../images/icon-bars.svg) no-repeat center;
+  mask: url(../images/icon-bars.svg) no-repeat center;
+}
+
+.gi-bars {
+  background-color: #c9777d;
+  height: 35px;
+  width: 35px;
+}
+
+.modalSearch {
+  display: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.modalSearch.active {
+  display: flex;
+}
+.modalSearch-side {
+  display: flex;
+  width: 20%;
+  padding: 0px 60px;
+  align-items: center;
+  justify-content: center;
+}
+.modalSearch-side.dialog-close-button a {
+  color: #c9777d;
+  font-size: 33px;
+}
+.modalSearch-center {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.modalSearch-center .search-content-form {
+  width: 100%;
+}
+
+.disable {
+  display: none;
+}
+
+.modalMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+}
+.modalMenu.active {
+  display: flex;
+}
+.modalMenu-content {
+  z-index: 900;
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgba(201, 119, 125, 0.73);
+  box-shadow: 2px 8px 23px 3px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 640px) {
+  .modalMenu-content {
+    width: 100%;
+  }
+}
+.modalMenu-content-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  position: relative;
+}
+.modalMenu-content-header-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+}
+.modalMenu-content-header-close a {
+  font-size: 33px;
+}
+.modalMenu-content-header-close a,
+.modalMenu-content-header-close a :hover {
+  color: #fff;
+}
+.modalMenu-content-body-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalMenu-content-body-item:hover {
+  background-color: #fff;
+}
+.modalMenu-content-body-item:hover a {
+  color: #c9777d;
+}
+.modalMenu-content-body-item.active {
+  background-color: #fff;
+}
+.modalMenu-content-body-item.active a {
+  color: #c9777d;
+}
+.modalMenu-content-body-item a {
+  width: 100%;
+  padding: 15px;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+.bt-ws {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 2;
+  bottom: 80px;
+  right: 18px;
+  width: 60px;
+  max-width: 95vw;
+  background: #25d366;
+  color: inherit;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, 0.24);
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+.bt-ws .bt-ws-item {
+  color: #fff;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */
